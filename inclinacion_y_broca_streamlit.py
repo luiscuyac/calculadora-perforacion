@@ -38,8 +38,8 @@ if st.button("Calcular"):
                 st.success(f"### Longitud del agujero: {broca} cm")
                 
                 # Cálculo de brocas según tipo de anclaje
-                st.info(f"Broca total SDS Plus: {broca + 5:.2f} cm")
-                st.warning(f"Broca total SDS Max: {broca + 10:.2f} cm")
+                st.info(f"Broca: {broca:.2f} cm de longitud de trabajo o superior")
+                st.warning("Nota: Es importante mantener la inclinación del taladro en la ejecución del agujero")
             else:
                 st.error("❌ El grosor debe ser mayor a 0.")
                 
