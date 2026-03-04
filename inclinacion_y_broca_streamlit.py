@@ -1,18 +1,25 @@
 import streamlit as st
 import math
 
+
+# Cambio en la pestaña del navegador
+st.set_page_config(page_title="Calculadora Perforación", page_icon="📐")
+
+
 # --- FUNCIONES DE CÁLCULO ---
 def inclinacion(grosor, desviacion):
     inclinar = math.atan2(desviacion, grosor)
     grados = round((math.degrees(inclinar)), 2)
     return grados
 
+
 def longitud_broca(grosor, desviacion):
     agujero = round((math.hypot(grosor, desviacion)), 2)
     return agujero
 
+
 # --- INTERFAZ PROFESIONAL ---
-st.title("🚀 Mi Calculadora de Perforación")
+st.title("🔌 Mi Calculadora de Perforación")
 
 # Entradas de texto como pediste
 g_input = st.text_input("Ingresa el grosor de la pared (cm):", value="", placeholder="Escribe aquí el grosor...")
@@ -38,8 +45,8 @@ if st.button("Calcular"):
                 st.success(f"### Longitud del agujero: {broca} cm")
                 
                 # Cálculo de brocas según tipo de anclaje
-                st.info(f"Broca: {broca:.2f} cm de longitud de trabajo o superior")
-                st.warning("Nota: Es importante mantener la inclinación del taladro en la ejecución del agujero")
+                st.info(f"Broca: {broca:.2f} cm de longitud de trabajo o superior.")
+                st.warning("Nota: Es importante mantener la inclinación del taladro en la ejecución del agujero.")
             else:
                 st.error("❌ El grosor debe ser mayor a 0.")
                 
