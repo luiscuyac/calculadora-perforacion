@@ -19,7 +19,7 @@ def longitud_broca(grosor, desviacion):
 
 
 # --- INTERFAZ PROFESIONAL ---
-st.title("🔌 Mi Calculadora de Perforación")
+st.title("📐 Mi Calculadora de Perforación")
 
 # Entradas de texto como pediste
 g_input = st.text_input("Ingresa el grosor de la pared (cm):", value="", placeholder="Escribe aquí el grosor...")
